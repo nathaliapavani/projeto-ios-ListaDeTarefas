@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P8P-lJ-HDM">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lista de Tarefas-->
+        <scene sceneID="7UT-YV-mCU">
+            <objects>
+                <tableViewController id="lTh-hG-tfp" customClass="TarefasTableViewController" customModule="listadetarefas" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="xbX-OD-kkU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.90897076099999996" green="0.89816129739999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexBackgroundColor" red="0.90897076099999996" green="0.89816129739999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula" id="zUP-if-6Gd">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zUP-if-6Gd" id="4s9-r6-VMS">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.90897076099999996" green="0.89816129739999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.90897076099999996" green="0.89816129739999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lTh-hG-tfp" id="Z4m-Di-4lO"/>
+                            <outlet property="delegate" destination="lTh-hG-tfp" id="0MT-ZI-pL9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Lista de Tarefas" id="aJ8-qJ-B4g">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="KrE-dF-NPU">
+                            <color key="tintColor" red="0.34342024770000001" green="0.3582192354" blue="0.70273638189999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="thF-Gl-LuC" kind="show" id="dMG-qs-9RW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPS-yp-8v7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="613" y="38"/>
+        </scene>
+        <!--Cadastro Tarefa View Controller-->
+        <scene sceneID="ss7-lf-RfC">
+            <objects>
+                <viewController id="thF-Gl-LuC" customClass="CadastroTarefaViewController" customModule="listadetarefas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nSb-Vv-Y98">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adicionar nova tarefa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZt-R7-DYY">
+                                <rect key="frame" x="20" y="115" width="160.66666666666666" height="20.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.3434202477105387" green="0.35821923539157097" blue="0.70273638193053434" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kGX-dM-QoR">
+                                <rect key="frame" x="20" y="143.66666666666666" width="350" height="34"/>
+                                <color key="backgroundColor" red="0.82182451690000002" green="0.85153446359999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Taa-Fd-lAo">
+                                <rect key="frame" x="152.66666666666666" y="194.66666666666666" width="85" height="31"/>
+                                <color key="backgroundColor" red="0.82182451690000002" green="0.85153446359999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.34342024770000001" green="0.3582192354" blue="0.70273638189999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Adicionar">
+                                    <color key="baseForegroundColor" red="0.34342024770000001" green="0.3582192354" blue="0.70273638189999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="adicionarTarefa:" destination="thF-Gl-LuC" eventType="touchUpInside" id="Xpl-hr-fzQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhW-eN-Agg">
+                                <rect key="frame" x="305" y="765" width="65" height="26"/>
+                                <color key="backgroundColor" red="0.82182451690000002" green="0.85153446359999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="4ID-TQ-N8i"/>
+                                </constraints>
+                                <color key="tintColor" red="0.34342024770000001" green="0.3582192354" blue="0.70273638189999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Créditos">
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="10"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="abrirAlerta:" destination="thF-Gl-LuC" eventType="touchUpInside" id="PYu-lL-fdo"/>
+                                    <action selector="adicionarTarefa:" destination="thF-Gl-LuC" eventType="touchUpInside" id="est-JS-7J9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Czm-ab-Knu"/>
+                        <color key="backgroundColor" red="0.90897076099999996" green="0.89816129739999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Taa-Fd-lAo" firstAttribute="top" secondItem="kGX-dM-QoR" secondAttribute="bottom" constant="17" id="3Gb-nu-BML"/>
+                            <constraint firstItem="kGX-dM-QoR" firstAttribute="leading" secondItem="Czm-ab-Knu" secondAttribute="leading" constant="20" id="H5f-ud-v1G"/>
+                            <constraint firstItem="QZt-R7-DYY" firstAttribute="leading" secondItem="Czm-ab-Knu" secondAttribute="leading" constant="20" id="MFc-fy-eQC"/>
+                            <constraint firstItem="Taa-Fd-lAo" firstAttribute="centerX" secondItem="nSb-Vv-Y98" secondAttribute="centerX" id="Opy-xY-H7o"/>
+                            <constraint firstItem="QZt-R7-DYY" firstAttribute="top" secondItem="Czm-ab-Knu" secondAttribute="top" constant="27" id="YVR-lq-PNd"/>
+                            <constraint firstItem="QZt-R7-DYY" firstAttribute="leading" secondItem="Czm-ab-Knu" secondAttribute="leading" constant="20" id="ZAt-lv-eyr"/>
+                            <constraint firstItem="kGX-dM-QoR" firstAttribute="top" secondItem="QZt-R7-DYY" secondAttribute="bottom" constant="8" id="b3m-8N-1Ud"/>
+                            <constraint firstItem="QZt-R7-DYY" firstAttribute="leading" secondItem="Czm-ab-Knu" secondAttribute="leading" constant="8" id="eLQ-qA-VOG"/>
+                            <constraint firstItem="Czm-ab-Knu" firstAttribute="trailing" secondItem="jhW-eN-Agg" secondAttribute="trailing" constant="20" id="gF3-t6-CTD"/>
+                            <constraint firstItem="Czm-ab-Knu" firstAttribute="trailing" secondItem="jhW-eN-Agg" secondAttribute="trailing" constant="20" id="iuw-0n-Kba"/>
+                            <constraint firstItem="Czm-ab-Knu" firstAttribute="trailing" secondItem="kGX-dM-QoR" secondAttribute="trailing" constant="20" id="n1u-18-N3b"/>
+                            <constraint firstItem="Czm-ab-Knu" firstAttribute="bottom" secondItem="jhW-eN-Agg" secondAttribute="bottom" constant="19" id="qPV-eg-81s"/>
+                            <constraint firstItem="QZt-R7-DYY" firstAttribute="top" secondItem="Czm-ab-Knu" secondAttribute="top" constant="28" id="tIG-w1-dBC"/>
+                            <constraint firstItem="QZt-R7-DYY" firstAttribute="top" secondItem="Czm-ab-Knu" secondAttribute="top" constant="27" id="wtv-pT-GaC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="82C-Ls-79c"/>
+                    <connections>
+                        <outlet property="tarefaCampo" destination="kGX-dM-QoR" id="iMG-1K-cfo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xur-Sv-GEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1318.125" y="37.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sLG-hw-4mk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" interfaceStyle="light" id="P8P-lJ-HDM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kxb-3h-Gh6">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.34342024770000001" green="0.3582192354" blue="0.70273638189999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lTh-hG-tfp" kind="relationship" relationship="rootViewController" id="zo0-71-Mb2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KGF-Ic-tYn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-117.39130434782609" y="37.5"/>
+        </scene>
+    </scenes>
+</document>
